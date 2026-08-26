@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA — Independent Creative</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="noise"></div>
+
+    <header><a class="logo" href="#top">NO<span>•</span>VA</a>
+        <nav><a href="#work">Selected work</a><a href="#about">About</a><button class="studio-toggle">Project studio
+                <i>↗</i></button></nav><button class="menu">Menu</button>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="hero-orbit orbit-a"></div>
+            <div class="hero-orbit orbit-b"></div>
+            <p class="eyebrow">Independent designer & creative developer <span>·</span> 2026</p>
+            <h1>Ideas from<br><em>another orbit.</em></h1>
+
+            <div class="hero-bottom">
+                <p>I shape distinct digital worlds<br>for people and brands moving forward.</p><a href="#work"
+                    class="scroll-link">Explore the work <span>↓</span></a>
+            </div>
+
+            <div class="hero-tag">Based in the<br>digital everywhere</div>
+        </section>
+
+        <section class="work" id="work">
+
+            <div class="section-heading">
+                <p class="eyebrow">01 / Selected transmissions</p>
+
+                <h2>Recent<br>signals.</h2>
+
+                <div class="filters"><button class="active" data-filter="all">Everything</button><button
+                        data-filter="Brand System">Identity</button><button
+                        data-filter="Digital Product">Digital</button><button
+                        data-filter="Experience">Experiences</button></div>
+            </div>
+
+            <div class="projects" id="projects"></div>
+        </section>
+
+        <section class="about" id="about">
+            <p class="eyebrow">02 / The human signal</p>
+            <div>
+                <h2>Good work lives<br>at the intersection<br>of <em>feeling</em> and function.</h2>
+
+                <p>I partner with curious people to make ambitious ideas feel inevitable. Every project is a small
+                    universe—built with clarity, character, and a little bit of wonder.</p>
+                <a href="mailto:navodmihiranga29@gmail.com">Start a conversation <span>↗</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer><a class="logo" href="#top">NO<span>•</span>VA</a>
+        <p>© 2026 / NMW Premium</p>
+        <div>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    <aside class="studio" aria-label="Project Studio">
+        <div class="studio-head">
+
+            <div>
+                <p class="eyebrow">Control room</p>
+                <h2>Project studio</h2>
+            </div>
+
+            <button class="close">x</button>
+        </div>
+
+        <form id="project-form"><label>Project title<input name="title" required placeholder="e.g. Moonhouse"></label>
+
+            <div class="form-row">
+                <label>Category<select name="category">
+                        <option>Brand System</option>
+                        <option>Digital Product</option>
+                        <option>Experience</option>
+                        <option>Graphic Design</option>
+                    </select></label>
+
+                <label>Year<input name="year" value="2026" maxlength="8"></label>
+            </div>
+
+            <label>Description<textarea name="description" required placeholder="What makes this project special?"></textarea></label>
+            <label>Services / stack<input name="stack" placeholder="Identity · Web · Motion"></label>
+            <label class="dropzone" id="dropzone"><input type="file" id="image" accept="image/*"><span class="upload-icon">↑</span><strong>Upload a project visual</strong>
+            <small>PNG or JPG, max 5MB</small></label><button class="publish" type="submit">Publish project <span>↗</span></button>
+            <p class="form-status" id="form-status"></p>
+        </form>
+
+        <div class="managed">
+            <p class="eyebrow">Published projects</p>
+            <div id="project-list"></div>
+        </div>
+    </aside>
+
+    <div class="scrim"></div>
+
+    <dialog id="project-modal"><button class="modal-close">×</button>
+        <div id="modal-content"></div>
+    </dialog>
+
+    <script src="app.js"></script>
+    
+</body>
+
+</html>
